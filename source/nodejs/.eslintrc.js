@@ -33,20 +33,51 @@ module.exports = {
       //   }
       // ],
       // "@typescript-eslint/indent": "error",
-      // "@typescript-eslint/member-delimiter-style": [
-      //   "error",
-      //   {
-      //     "multiline": {
-      //       "delimiter": "semi",
-      //       "requireLast": true
-      //     },
-      //     "singleline": {
-      //       "delimiter": "semi",
-      //       "requireLast": false
-      //     }
-      //   }
-      // ],
-      // "@typescript-eslint/member-ordering": "error",
+      "@typescript-eslint/member-delimiter-style": [
+        "error",
+        {
+          "multiline": {
+            "delimiter": "semi",
+            "requireLast": true
+          },
+          "singleline": {
+            "delimiter": "semi",
+            "requireLast": false
+          }
+        }
+      ],
+      "@typescript-eslint/member-ordering": [
+        "error",
+        {
+          "default": [
+            'private-abstract-field',
+            'private-abstract-method',
+            'private-instance-field',
+            'private-static-field',
+            'private-instance-method',
+            'private-static-method',
+            'private-constructor',
+
+            'protected-abstract-field',
+            'protected-abstract-method',
+            'protected-instance-field',
+            'protected-static-field',
+            'protected-instance-method',
+            'protected-static-method',
+            'protected-constructor',
+
+            'public-abstract-field',
+            'public-abstract-method',
+            'public-static-field',
+            'public-instance-field',
+            'public-static-method',
+            'public-instance-method',
+            'public-constructor',
+
+            'signature',
+          ]
+        }
+      ],
       // "@typescript-eslint/no-empty-function": "error",
       "@typescript-eslint/no-inferrable-types": "off",
       "@typescript-eslint/ban-ts-comment": [
@@ -62,6 +93,9 @@ module.exports = {
         {
           "prefixWithI": "always"
         }
+      ],
+      "@typescript-eslint/class-literal-property-style": [
+        "error", "fields"
       ]
       // "@typescript-eslint/no-use-before-define": "error",
       // "@typescript-eslint/quotes": [
